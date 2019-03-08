@@ -9,6 +9,21 @@ pipeline {
             
             }
                     }
+                    stage ('Testing Stage') {
+
+                steps {
+                withant(ant : '1.9.6')
+            sh 'ant'
+            
             }
+            }
+            stage ('Deploy Stage') {
+
+                steps {
+                withant(ant : '1.9.6')
+            sh 'ant'
+            
+            }
+
     }
 }
