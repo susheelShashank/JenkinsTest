@@ -1,7 +1,7 @@
 pipeline {
     agent any
         stages {
-            stage ('Compile Stage') {
+            stage('Compile Stage') {
 
                 steps {
                 withant(ant : '1.9.6')
@@ -9,7 +9,7 @@ pipeline {
             
             }
                     }
-                    stage ('Testing Stage') {
+                    stage('Testing Stage') {
 
                 steps {
                 withant(ant : '1.9.6')
@@ -18,11 +18,11 @@ pipeline {
             
             }
             }
-            stage ('Deploy Stage') {
+            stage('Deploy Stage') {
 
                 steps {
                 withant(ant : '1.9.6')
             sh 'publish'
             
         }
-    }
+}
