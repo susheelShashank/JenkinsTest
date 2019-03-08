@@ -1,0 +1,14 @@
+pipeline {
+    agent any{
+        stages {
+            stage ('Compile Stage') {
+
+                steps {
+                withant(ant : '1.9.6')
+            sh 'ant'
+            
+            }
+                    }
+            }
+    }
+}
